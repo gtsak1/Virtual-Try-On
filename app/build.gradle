@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.augmentedfaces.virtual_try_on"
+
+        // Sceneform requires minSdkVersion >= 24.
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+    // Sceneform libraries use language constructs from Java 8.
+    // Add these compile options if targeting minSdkVersion < 26.
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    // Provides ArFragment, and other Sceneform UX resources:
+    implementation "com.google.ar.sceneform.ux:sceneform-ux:1.12.0"
+
+    implementation "com.android.support:appcompat-v7:28.0.0"
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+
+}
+
+apply plugin: 'com.google.ar.sceneform.plugin'
+
+sceneform.asset('sampledata/models2/glasses.obj',
+        'default',
+        'sampledata/models2/glasses.sfa',
+        'src/main/res/raw/glasses')
+
+sceneform.asset('sampledata/models1/goldallo.obj',
+        'default',
+        'sampledata/models1/goldallo.sfa',
+        'src/main/res/raw/goldallo')
+
+sceneform.asset('sampledata/models/sunglasses_01.obj',
+        'default',
+        'sampledata/models/sunglasses_01.sfa',
+        'src/main/res/raw/sunglasses_01')
+
+sceneform.asset('sampledata/models/am_body.fbx',
+        'default',
+        'sampledata/models/am_body.sfa',
+        'src/main/res/raw/am_body')

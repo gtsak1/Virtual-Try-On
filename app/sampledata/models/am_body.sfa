@@ -1,0 +1,62 @@
+{
+  animations: [
+    {
+      path: 'sampledata/models/am_body.fbx',
+    },
+  ],
+  materials: [
+    {
+      name: 'body',
+      parameters: [
+        {
+          baseColor: [
+            0.98101300000000002,
+            0.67214600000000002,
+            0,
+            1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+      'BoneIndices',
+      'BoneWeights',
+    ],
+    collision: {},
+    file: 'sampledata/models/am_body.fbx',
+    name: 'am_body',
+    recenter: 'root',
+    scale: 0.105,
+  },
+  version: '0.54:2',
+}

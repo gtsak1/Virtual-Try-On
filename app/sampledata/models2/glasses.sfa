@@ -1,0 +1,43 @@
+{
+  materials: [
+    {
+      name: 'wire_028028177',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            0.1367000000000000,
+            0.2031000000000000,
+            0.6680000000000000,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 0,
+        },
+        {
+          opacity: 0.7,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/models2/glasses.obj',
+    name: 'glasses',
+    recenter: 'root',
+    scale: 0.0008,
+  },
+  version: '0.54:2',
+}

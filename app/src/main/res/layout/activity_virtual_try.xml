@@ -1,0 +1,72 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VirtualTryOnActivity">
+
+
+  <fragment android:name="com.augmentedfaces.virtual_try_on.FaceArFragment"
+      android:id="@+id/face_fragment"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+
+
+
+
+
+        <android.support.v7.widget.RecyclerView
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/models_recy" />
+
+
+
+
+
+  <LinearLayout
+      android:gravity="center"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_marginTop="30dp"
+      android:layout_marginEnd="6dp"
+      >
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_gravity="center"
+        android:layout_width="145dp"
+        android:layout_height="match_parent"
+        android:max="2"
+        android:progressTint="@android:color/transparent"
+        android:progressDrawable="@drawable/seek_bar"
+        android:thumb="@drawable/seek_thumb"
+        />
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <Button
+          android:id="@+id/button"
+          android:layout_width="65dp"
+          android:layout_height="30dp"
+          android:layout_marginEnd="5dp"
+          />
+
+      <Button
+          android:id="@+id/button2"
+          android:layout_width="65dp"
+          android:layout_height="30dp"
+          />
+    </LinearLayout>
+
+  </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
