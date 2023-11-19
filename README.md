@@ -4,5 +4,3 @@ SceneForm Plugin is required to be installed for the creation of the glasses mod
 
 • minSdkVersion 24
 
-https://user-images.githubusercontent.com/58042128/135551311-4454734f-df0c-4097-a7bd-89b45f00ccdf.mp4
-
